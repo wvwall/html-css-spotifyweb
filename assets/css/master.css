@@ -1,70 +1,71 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-  }
-body {
-    background-color: #141922;
 }
-  aside {
-      width: 15%;
-      height: 100vh;
-      background-color: #000;
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 2;
-  }
+body > * {
+    height: 200px;
+}
 
-  aside img {
-      width: 60%;
-      margin: 20px;
-  }
- 
-  footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100vw;
-      height: 70px;
-      background-color: #282828;
-      z-index: 1;
-  }
-  main {
-      width: calc( 100vw - 15% );
-      height: calc( 100vh - 70px );
-      position: absolute;
-      right: 0;
-      overflow-x: hidden;
-  }
-  /* UTILITY */
-  .uppercase {
-      text-transform: uppercase;
-  }
-  .container-flex {
-      display: flex;
-      padding-left: 10px;
-  }
-  /* MAIN */
-.main-top-fixed {
+header {
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100vw - 200px);
+    height: 80px;
+    z-index: 2;
+}
+main {
+    background-color:#141922;
+    height: calc(100vh - 80px);
+    display: flex;
+    
+}
+
+aside {
+    width: 200px;
+    height: 100%;
+    background-color: #000000;
+}
+div[role="app-content"] {
+    width: calc(100% - 200px);
+    overflow-y: auto;
+}
+footer {
+    background-color:#282828;
+    height: 80px;
+}
+
+section {
+    margin-bottom: 10px ;
+    margin-left: 15px;
     width: 100%;
-    height: 70px;
-    background-color: #080B12;
+    background-color: transparent;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.container-flex {
+    display: flex;
+}
+
+.banner-top {
     display: flex;
     justify-content: flex-end;
 }
  .upgrade {
-    height: 40px;
+    height: 30px;
     color: #fff;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     border: 2px solid #fff;
     background-color: #080B12;
-    padding: 0px 30px;
+    padding: 0px 20px;
     border-radius: 18px;
-    align-self: center;
+    margin-right: 20px;
+    margin-top: 20px;
 }
 .upgrade:hover {
     background-color: #fff;
@@ -72,22 +73,105 @@ body {
     transition: 1s;
     cursor: pointer;
 }
-.main-top-fixed {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1;
+.sidebar {
+    position: relative;
 }
-
-.invisible {
-    width: calc(100vw - 18%);
-    height: 70px;
+.logo {
+    color: #fff;
+    margin-top: 15px;
+}
+.logo img {
+    width: 40%;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle; 
+    
+}
+.logo i {
+    font-size: 30px;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+.home svg,.search svg ,.library svg {
+    vertical-align: middle;
+    transition: 1s;
+    cursor: pointer;
+}
+.home span {
+    color: #fff;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.search span,.library span {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 12px;
+    vertical-align: middle;
+    transition: 1s;
+    cursor: pointer;
+}
+.playlist h5 {
+    color: #fff;
+    width: 80%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.playlist a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.5;
+    font-size: 12px;
+}
+.playlist a:hover{
+    opacity: 1;
+}
+.playlist i {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 35px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.playlist i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.playlist li {
+    margin-bottom: 10px;
+}
+.sidebar {
     display: flex;
-    justify-content: flex-end
-
-    /* CATEGORIE */
+    flex-direction: column;
 }
-
+.icon_down {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+}
+.icon_down span,.icon_down i {
+    font-size: 12px;
+    color: #fff;
+}
+.install hr {
+    width: 80%;
+    margin-top: 5px;
+}
+.install span {
+    opacity: 0.5;
+}
+.install span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.user span {
+    font-size: 15px;
+}
+.invisible {
+    height: 80px;
+}
 #categorie .container-flex {
     width: 100%;
     display: flex;
@@ -97,10 +181,10 @@ body {
 }
 #categorie ul {
     list-style: none;
-    margin-top: 10px;
+
 }
 #categorie li {
-    margin: 0 10px;
+    margin: 5px 5px;
 }
 #categorie a {
     color: #fff;
@@ -108,6 +192,7 @@ body {
     opacity: 0.5;
     font-weight: 500;
     text-decoration-line: none;
+    
 }
 #categorie a:hover {
     color: #fff;
@@ -122,8 +207,6 @@ body {
     text-align: center;
     border-color: #ADFF2F;
 }
-
-/* PLAYLIST */
 #playlist {
     width: 100%;
 }
@@ -133,23 +216,23 @@ body {
 #playlist .container-flex h3 {
     color: #fff;
     margin-top: 30px;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 #cards .container-flex {
     width: 100%;
-    margin-left: 10px;
     margin-top: 10px;
     
 }
 .playlist {
-    text-align: center;
-    width: 150px;
+ 
+    width: 120px;
     height: auto;
-    margin:5px;
+    margin:10px;
 }
 #cards .playlist .card {
+    
     width: 100%;
-    height: 150px;
+    height: 120px;
     background-color:#ADFF2F;
     margin-bottom: 10px;
 }
@@ -174,3 +257,5 @@ body {
     margin-top:8px ;
     margin-bottom: 10px;
 }
+
+
