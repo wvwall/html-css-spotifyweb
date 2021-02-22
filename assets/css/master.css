@@ -40,7 +40,7 @@ footer {
 
 section {
     margin-bottom: 10px ;
-    margin-left: 15px;
+
     width: 100%;
     background-color: transparent;
 }
@@ -76,6 +76,9 @@ section {
 .sidebar {
     position: relative;
 }
+.sidebar section {
+    margin-left: 15px;
+}
 .logo {
     color: #fff;
     margin-top: 15px;
@@ -110,46 +113,48 @@ section {
     transition: 1s;
     cursor: pointer;
 }
-.playlist h5 {
+.new_playlist h5 {
     color: #fff;
     width: 80%;
     padding-top: 10px;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
-.playlist a {
+.new_playlist a {
     color: #fff;
     text-decoration: none;
     opacity: 0.5;
     font-size: 12px;
 }
-.playlist a:hover{
+.new_playlist a:hover{
     opacity: 1;
 }
-.playlist i {
+.new_playlist i {
     color: #fff;
     opacity: 0.5;
     font-size: 35px;
     vertical-align: middle;
     padding-right: 5px;
 }
-.playlist i:hover {
+.new_playlist i:hover {
     opacity: 1;
     cursor: pointer;
 }
-.playlist li {
+.new_playlist li {
     margin-bottom: 10px;
+    list-style: none;
 }
 .sidebar {
     display: flex;
     flex-direction: column;
 }
 .icon_down {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: absolute;
-    bottom: 0;
+    justify-content: flex-end;
+    
 }
 .icon_down span,.icon_down i {
     font-size: 12px;
@@ -177,7 +182,6 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 #categorie ul {
     list-style: none;
@@ -192,7 +196,6 @@ section {
     opacity: 0.5;
     font-weight: 500;
     text-decoration-line: none;
-    
 }
 #categorie a:hover {
     color: #fff;
@@ -221,25 +224,26 @@ section {
 #cards .container-flex {
     width: 100%;
     margin-top: 10px;
-    
+}
+#cards h5 a:hover {
+    text-decoration: underline;
 }
 .playlist {
- 
-    width: 120px;
+    text-align: center;
+    width: 150px;
     height: auto;
     margin:10px;
 }
-#cards .playlist .card {
-    
+#cards .playlist .card img{
     width: 100%;
-    height: 120px;
-    background-color:#ADFF2F;
+    height: 150px;
     margin-bottom: 10px;
 }
 #cards .playlist a,
 #cards .playlist span{
     text-decoration: none;
     color: #fff;
+    opacity: 1;
 }
 #cards .playlist span {
     font-size: 10px;
@@ -258,4 +262,6 @@ section {
     margin-bottom: 10px;
 }
 
-
+.br img{
+    border-radius: 50%;
+}
