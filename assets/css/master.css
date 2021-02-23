@@ -280,7 +280,7 @@ section {
 }
 .playlist_2 span {
     color: #fff;
-    margin-left: 15px;
+    margin-left: 10px;
     font-size: 12px;
     opacity: 0.6;
     margin-top:8px ;
@@ -303,7 +303,7 @@ footer .container-flex  {
     align-items: center;
     width: 100%;
     color: #fff;
-   
+   justify-content: space-between;
 }
 
 .card-player {
@@ -343,5 +343,13 @@ footer .container-flex  {
     display: flex;
     margin-left: 20px;
     align-items: center;
+}
+.buttons_player {
     
+   
+    
+}
+.buttons_player i {
+    font-size: 20px;
+    margin-right: 10px;
 }
