@@ -41,6 +41,7 @@ footer {
     height: 80px;
     width: 100vw;
     position: fixed;
+    z-index: 2;
 }
 
 section {
@@ -48,6 +49,7 @@ section {
     width: 100%;
     background-color: transparent;
 }
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -72,9 +74,9 @@ section {
     margin-top: 20px;
 }
 .upgrade:hover {
-    background-color: #fff;
-    color: #080B12;
-    transition: 1s;
+    background-color: #03c03c;  
+    border: 2px solid #000;
+    transition: ease 1s;
     cursor: pointer;
 }
 .sidebar {
@@ -85,7 +87,7 @@ section {
 }
 
 .home {
-    border-left: 3px solid  #ADFF2F;
+    border-left: 3px solid  #03c03c;
 }
 
 .home a,.search a,.library a {
@@ -111,7 +113,6 @@ section {
 .logo i {
     font-size: 30px;
     vertical-align: middle;
-    padding-left: 5px;
 }
 .home svg,.search svg ,.library svg {
     vertical-align: middle;
@@ -216,7 +217,7 @@ section {
     text-decoration-line: none;
 }
 #categorie a:hover {
-    color: #fff;
+    color: #03c03c;
     font-size: 11px;
     opacity: 1;
     font-weight: 500;
@@ -226,13 +227,14 @@ section {
     display: block;
     margin: 0 auto;
     text-align: center;
-    border-color: #ADFF2F;
+    border-color: #03c03c;
 }
 #playlist {
     width: 100%;
 }
 #playlist .container-flex {
     flex-wrap: wrap;
+    
 }
  h3 {
     color: #fff;
@@ -306,15 +308,13 @@ footer .container-flex  {
     
 }
 
-.card-player {
+.card-album {
     display: flex;
-    width: 30%;
-    height: 50px;
-   
-   flex-wrap: wrap;
-  
+    flex: 1 0 150px;
+    flex-wrap: wrap;
+    margin-left: 10px;
 }
-.card-player img  {
+.card-album img  {
     width: 50px;
 }
 
@@ -338,20 +338,21 @@ footer .container-flex  {
 }
 
 .buttons_player {
-    width: 40%;
+    flex: 2 0 300px;
     display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: flex-start;
 }
 .buttons_player i {
-    
+    font-size: 20px;
     margin-right: 10px;
 }
-.card-player a {
+.card-album a {
     align-self: center;
 }
 .volume_player {
+    flex: 1 0 100px;
     display: flex;
     justify-content: flex-end;
     align-content: center;
@@ -362,23 +363,117 @@ footer .container-flex  {
    margin-top: 20px;
 }
 .progress_bar {
-    width: 100%;
+    width: 50%;
     height: 2px;
     background-color: #fff;
-    
-    margin-top: 5px;
+    margin-top: 8px;
 }
+
 .progress_bar div {
     width: 40%;
     height: 3px;
-    background-color: #ADFF2F;
+    background-color: #03c03c;
+    opacity: 1;
+}
+.progress_2 div {
+    width: 40%;
+    height: 3px;
+    background-color: #03c03c;
     opacity: 1;
 }
 .progress_2 {
-    width: 30%;
-    margin-right: 10px;
+    height: 2px;
+    background-color: #fff;
+    width: 25%;
+    margin-right: 15px;
    margin-top: 30px;
 }
 .fa-play-circle {
     font-size: 30px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media all and (max-width: 576px) {
+    .new_playlist {
+        display: none;
+    }
+    .sidebar img {
+        display: none;
+    }
+    .sidebar span {
+        display: none;
+    }
+    aside {
+        width: 50px;
+    }
+    div[class="app-content"] {
+        width: calc(100% - 50px);
+        overflow-y: auto;
+    }
+    header {
+        background-color: rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: calc(100vw - 50px);
+        height: 80px;
+        z-index: 2;
+    }
+    .sidebar hr {
+        display: none;
+    }
+    .sidebar .logo i {
+        padding: 0;
+    }
+    .playlist {
+        text-align: center;
+        width: 110px;
+        height: auto;
+        margin:10px;
+        justify-content: center;
+    }
+    .cards .playlist .card img{
+        width: 100%;
+        height: 110px;
+        margin-bottom: 10px;
+    }
+    
+    
+    #playlist .container-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .progress_2 {
+        display: none;
+    }
+    .fa-volume-up {
+        display: none;
+    }
+    .card-album h6,.card-album span {
+        display: none;
+    }
+    
+    .card-album {
+        display: flex;
+        flex: 1 0 50px;
+        flex-wrap: wrap;
+  
+    }
+    .buttons_player {
+        flex: 2 0 150px;
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+    }
+    .volume_player {
+        flex: 1 0 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+    }
 }
