@@ -271,10 +271,14 @@ section {
     left: 50%;
     transform: translate(-50% , -50%);
     opacity: 0;
+    z-index: 1;
 }
 .card:hover .hover-plus {
     opacity: 0.9;
     cursor: pointer;
+}
+.card:hover img {
+    opacity: 0.5;
 }
 }
 .playlist_2  h3 {
@@ -379,7 +383,7 @@ footer .container-flex  {
     font-size: 25px;
 }
 .fa-play-circle {
-    font-size: 30px;
+    font-size: 40px;
 }
 .fa-redo-alt {
     font-size: 20px;
