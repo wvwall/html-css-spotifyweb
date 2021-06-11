@@ -280,7 +280,7 @@ section {
 .card:hover img {
     opacity: 0.5;
 }
-}
+
 .playlist_2  h3 {
     color: #fff;
     margin-top: 30px;
@@ -464,6 +464,9 @@ footer .container-flex  {
 
 
 @media all and (max-width: 576px) {
+    body {
+        background-color: #353535;
+    }
     .new_playlist {
         display: none;
     }
@@ -479,6 +482,7 @@ footer .container-flex  {
     div[class="app-content"] {
         width: calc(100% - 50px);
         overflow-y: auto;
+        height: 90%;
     }
     header {
         background-color: rgba(0,0,0,0.5);
@@ -486,13 +490,15 @@ footer .container-flex  {
         top: 0;
         right: 0;
         width: calc(100vw - 50px);
-        height: 80px;
+        height: 60px;
         z-index: 2;
     }
     .sidebar hr {
         display: none;
     }
-    
+    .upgrade {
+        margin-top: 15px;
+    }
     .playlist {
         text-align: center;
         width: 110px;
@@ -554,5 +560,13 @@ footer .container-flex  {
         display: flex;
         justify-content: flex-end;
         align-content: center;
+    }
+    .icon_down {
+        position: relative;
+        bottom: 40px;
+    }
+    footer {
+        position: relative;
+        bottom: 40px;
     }
 }
